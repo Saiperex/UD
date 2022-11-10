@@ -186,4 +186,64 @@ main
 .imagen img
 {
     height: 100%;
+    filter: brightness(0);
+}
+
+@media screen and (max-width:415px)
+{
+    .frase-uno,.frase-dos
+    {
+        display: none;
+    }
+    main
+    {
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 10% 70% 10% 10%;
+        grid-template-areas: 
+        "universal universal"
+        "dance imagen"
+        "historia historia"
+        "vermas vermas"
+        ;
+    }
+    .universal
+    {
+        grid-area: universal;
+        font-size: 9vh;
+    }
+    .dance
+    {
+        grid-area: dance;
+        font-size: 6vh;
+    }
+    .historia
+    {
+        grid-area: historia;
+        justify-content: space-around;
+    }
+    .cont h2
+    {
+        font-size: 5VH;
+        background-color: red;
+        color: white;
+    }
+    .cont p
+    {
+        font-size: 1VH;
+    }
+    .cont
+    {
+        transform: rotate(0deg);
+        width: 50%;
+
+    }
+    .boton
+    {
+        grid-area: vermas;
+    }
+    .vermas
+    {
+        width: 50%;
+        height: 70%;
+    }
 }
