@@ -246,4 +246,13 @@ main
         width: 50%;
         height: 70%;
     }
+    .contenido-Central
+    {
+        display: flex;
+
+    }
+    .contenido-Central img
+    {
+        width: 80%;
+    }
 }
