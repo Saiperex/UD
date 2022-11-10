@@ -3,7 +3,6 @@ var fondo=document.getElementById("img-animation");
 var index=0;
 function cambiarFondo()
 {
-    
     if(index<1)
     {
         index=index+1;
@@ -14,7 +13,9 @@ function cambiarFondo()
     }
     var url="imagenes/recursos/"+imagenes[index];
     fondo.src=url;
-    fondo.style.transition="1s all";
+    fondo.style.animation="borrado infinite 5000ms"
+    fondo.style.transition="all 1s";
     tiempo=window.setTimeout('cambiarFondo()',5000)
 }
+
 cambiarFondo();

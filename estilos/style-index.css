@@ -52,8 +52,8 @@ main
     grid-template-columns: repeat(5,20%);
     grid-template-rows: repeat(2,50%);
     grid-template-areas: 
-    "u u fp fs hist"
-    "d n n n  hist"
+    "u u imagen imagen hist"
+    "d b imagen imagen  hist"
     ;
 }
 .universal
@@ -83,37 +83,33 @@ main
     
     transform: rotate(-90deg);
 }
-.frase-uno
+.boton
 {
-    z-index: 1;
-    grid-area: fp;
-    color: rgb(0, 0, 0);
-    margin: 50px 10px;
-    box-sizing: border-box;
-    text-align: center;
-    text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+    grid-area: b;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.frase-uno h2
+.vermas
 {
+    color: rgb(255,255,255);
+    background:grey;
+    font-size: 2vh;
+    font-family: 'Righteous', cursive;
+    width: 50%;
+    height: 10%;
+    border: none;
+    transition: all 1s;
+}
+.vermas:hover
+{
+    color: rgb(255,255,255);
+    background:rgb(0, 0, 0);
+    width: 70%;
+    height: 20%;
     font-size: 3vh;
-    font-weight: bold;
-    margin-top: 10%;
 }
-.frase-dos
-{
-    grid-area: fs;
-    color: rgb(0, 0, 0);
-    margin: 50px 10px;
-    box-sizing: border-box;
-    text-align: center;
-    text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
-}
-.frase-dos h2
-{
-    font-size: 3vh;
-    font-weight: bold;
-    margin-top: 10%;
-}
+
 .historia
 {
     grid-area: hist;
@@ -138,21 +134,56 @@ main
 {
     font-size: 0.6vw;
 }
-/*imagen*/
+/* centro*/
+.contenido-Central
+{
+    grid-area: imagen;
+    display: grid;
+    grid-template-columns:repeat(2, 50%);
+    grid-template-rows: 25% 75%;
+    grid-template-areas:
+    "histuno histdos"
+    "imagen imagen" 
+    ;
+}
+
+.frase-uno
+{
+    grid-area: histuno;
+    color: rgb(0, 0, 0);
+    margin: 50px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+}
+.frase-uno h2
+{
+    font-size: 3vh;
+    font-weight: bold;
+    margin-top: 10%;
+}
+.frase-dos
+{
+    grid-area: histdos;
+    color: rgb(0, 0, 0);
+    margin: 50px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+}
+.frase-dos h2
+{
+    font-size: 3vh;
+    font-weight: bold;
+    margin-top: 10%;
+}
+.imagen
+{
+    grid-area: imagen;
+    display: flex;
+    justify-content: space-around;
+}
 .imagen img
 {
-    height: 80vh;
-    position: absolute;
-    left: 40vw;
-    top: 10vh;
-    filter: opacity(0);
-    animation: borroso infinite 5s backwards;
-}
-@keyframes borroso 
-{
-    to 
-    {
-        filter: opacity(1);
-        transition: filter 1s;
-    }
+    height: 100%;
 }
