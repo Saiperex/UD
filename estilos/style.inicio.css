@@ -447,6 +447,10 @@ form
     {
         display: none;
     }
+    .registro form 
+    {
+        width: 100%;
+    }
     /*fin registro*/
     /*ubicacion*/
     .cont-ubicacion h2 
