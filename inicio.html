@@ -3,24 +3,39 @@
 <head>
     <!--Estilos-->
     <link rel="stylesheet" href="estilos/reset.css">
+
     <link rel="stylesheet" href="estilos/style.inicio.css">
+
     <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
     <!--Script-->
+
     <script src="https://kit.fontawesome.com/096e27a306.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
+
+    <!--Icono-->
+    <link rel="shortcut icon" href="imagenes/iconos/logo-ud.png" type="image/x-icon">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bienvenidos</title>
+
 </head>
+
 <body>
+    
     <header class="cabecera">
         <div class="contenedor">
             <div class="titulo">
                 <label><a href="#tuespacio">ESPACIO</a></label>
-                <label><a href="#profesores">PROFESORES</a></label>
+                <label><a href="#galeria">GALERIA</a></label>
                 <label ><a href="#disciplinas">DISCIPLINAS</a></label>
                 <label><a href="#ubicacion">UBICACION</a></label>
                 <label ><a href="#contacto">CONTACTO</a></label>
@@ -37,7 +52,9 @@
             </nav>
         </div>
     </header>
+
     <main class="principal">
+        <div class="separador"></div>
 
         <section class="titulos sec">
             <div class="cont-blur">
@@ -58,29 +75,121 @@
             </div>
         </section>
 
-        <section id="profesores" class="profesores sec">
-            <div class="cont-profesores">
-                <div class="profe lud">
-                    <div class="tarjeta"></div>
+        <section id="galeria" class="galeria sec">
+            
+        </section>
+
+        <section id="disciplinas" class="disciplinas sec">
+            <div class="cont-disciplinas">
+                <div class="centrar">
+                    <h1 class="dis">Disciplinas</h1>
+                    <div class="dis-contenedor">
+
+                        <div class="tarjeta">
+                            <figure>
+                                <img src="imagenes/recursos/bailarinas-ej.png" alt="">
+                            </figure>
+                            <h3 class="tt">Titulo</h3>
+                            <p class="descripcion">descripcion</p>
+                            <legend class="horario">horario</legend>
+                        </div>
+
+                        <div class="tarjeta">
+                            <figure>
+                                <img src="imagenes/recursos/bailarinas-ej.png" alt="">
+                            </figure>
+                            <h3 class="tt">Titulo</h3>
+                            <p class="descripcion">descripcion</p>
+                            <legend class="horario">horario</legend>
+                        </div>
+
+                        <div class="tarjeta">
+                            <figure>
+                                <img src="imagenes/recursos/bailarinas-ej.png" alt="">
+                            </figure>
+                            <h3 class="tt">Titulo</h3>
+                            <p class="descripcion">descripcion</p>
+                            <legend class="horario">horario</legend>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="profe otras">
-                    <div class="tarjeta"></div>
-                    <div class="tarjeta"></div>
-                    <div class="tarjeta"></div>
+            </div>
+        </section>
+        
+        <section id="ubicacion" class="ubicacion sec">
+            <div class="cont-ubicacion">
+                <h2>UBICACIÓN</h2>
+                <p>Nuestro establecimiento está cerca tuyo</p>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.2526542656315!2d-58.61432448423439!3d-34.698806870043704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc6edfb6e7cf9%3A0x8d065b41eefc8326!2sGuillermo%20Marconi%201365%2C%20B1755KAA%20Rafael%20Castillo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1663472891582!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
 
-        <section id="disciplinas" class="disciplinas sec">
-
-        </section>
-        
-        <section id="ubicacion" class="ubicacion sec">
-
-        </section>
-
         <section id="contacto" class="contacto sec">
-
+            <div class="cont-registro">
+                <div class="registro-redes">
+                    <div class="registro">
+                        <h2 class="t">Registrate</h2>
+                        <legend class="l">Para recibir novedades</legend>
+                        <form action="">
+                            <label for="nombreapellido">Nombre y Apellido</label><!--La etiqueta for enlaza el texto del label al imput-->
+                            <input type="text" name="" id="nombreapellido" class="input-padron" required placeholder="Nombre y Apellido"><!--Entrada tipo texto-->
+                            <!--La palabra required quiere decir que ese input es obligatorio-->
+                            <!--El placeholder es el texto de adentro del input. Sirve como mensaje previo-->
+                
+                            <label for="correoelectronico">Correo Electronico</label>
+                            <input type="email" name="" id="correoelectronico" class="input-padron"required placeholder="email@dominio.com"><!--Es un input que admite direccion de correo -->
+                
+                            <label for="telefono">telefono</label>
+                            <input type="tel" name="" id="telefono" class="input-padron"required placeholder="(xxx) 15(x-xxx-xxx)">
+                
+                            
+                            <fieldset><!--Lo ecomendable es que si hay un grupo de inpput que pertenecen a algo en especifico, agruparlos de esta manera-->
+                                <legend>¿Como le gustaria que lo contactemos?</legend><!--Se prefiere usar esto en vez que P para marcar texto como una leyenda-->
+                
+                                <label class="checkbox" for="radio-email"><input type="radio" name="contacto" id="radio-email" value="E-mail">E-mail</label><!--Es un boton radio que se pone de color cuando esta seleccionado-->
+                                <!--Se usa el name para enlazar los radio y asi poder seleccionar solo uno-->
+                
+                                <label class="checkbox" for="radio-telefono"><input type="radio" name="contacto" id="radio-telefono" value="Telefono">Telefono</label>
+                                
+                
+                                <label class="checkbox" for="radio-whatsapp"><input type="radio" name="contacto" id="radio-whatsapp" value="Whatsapp" checked>Whatsapp</label>
+                                <!--El checked es la posibilidad de dejar un punto marcado por defecto-->
+                                
+                            </fieldset>
+                
+                            <fieldset>
+                                <legend>En cual horario desearia ser atendido</legend>
+                                <select name="" id=""><!--Esta etiqueta sirve para deslegar una lista de opciones-->
+                                    <option value="">Mañana</option>
+                                    <option value="">Tarde</option>
+                                    <option value="">Noche</option>
+                                </select>
+                            </fieldset>
+                            
+                
+                            <label ><input type="checkbox" checked > Le gustaria recibir novedades de Universal Dance</label><!--Si lo agrego de esta manera no tendre que usar ni el id ni el for. El checkbox es un cuadradito para marcar-->
+                
+                            <input type="submit" class="enviar" value="Enviar Formulario"><!--Entrada tipo boton-enviar. Con el value puedo cambiar el texto del boton-->
+                
+                        </form>
+                    </div>
+                    <div class="redes">
+                        <Legend>O contactanos por nuestras redes</Legend>
+                        <nav class="lista-redes">
+                    
+                            <a class="f" href="https://www.facebook.com/Inst.Universal.Dance"><i class="fa-brands fa-facebook-f"></i></a>
+                
+                            <a class="i" href="https://www.instagram.com/inst.universal.dance/"><i class="fa-brands fa-instagram"></i></a>
+                
+                            <a class="w" href="https://api.whatsapp.com/send/?phone=%2B5491162347054&amp;text&amp;type=phone_number&amp;app_absent=0"><i class="fa-brands fa-whatsapp"></i></a>
+                
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 </body>

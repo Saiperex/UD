@@ -56,10 +56,20 @@ html
 .sec
 {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+section[id]
+{
+    scroll-margin-top: 10vh;
+}
+/*separador*/
+.separador
+{
+    width: 100%;
+    height: 10vh;
 }
 /*titulo*/
 .titulos
@@ -133,34 +143,221 @@ html
     font-family: 'Righteous', cursive;
 
 }
-/*Profesores*/
-.profesores
+/*galeria*/
+/*disciplinas*/
+.cont-disciplinas
 {
-    background-color: rgb(94, 33, 41);
+    width: 90%;
+    height: 90%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.cont-profesores
+.centrar
 {
-    width: 80%;
-    height: 70%;
-    background-color: white;
+    width: 90%;
+    height: 90%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
-.profe
+.dis
+{
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+    font-size: 10vh;
+    width: 100%;
+    height: 20%;
+    font-family: 'Righteous', cursive;
+    -webkit-text-stroke: 1px black;
+}
+.dis-contenedor
 {
     width: 100%;
-    height: 50%;
+    height: 75%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 .tarjeta
 {
-    width: 400px;
     height: 90%;
-    background-color: black;
+    width: 30%;
+    text-align: center;
+    font-family: 'Righteous', cursive;
     border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transform: none;
+    transition: box-shadow 400ms ease;
+    transition: transform 400ms ease;
+}
+.tarjeta img
+{
+    width: 100%;
+}
+.tt
+{
+    color: black;
+    font-size: 5vh;
+}
+.descripcion
+{
+    color: black;
+    font-size: 2vh;
+}
+.horario
+{
+    color: black;
+    font-size: 3vh;
+}
+.tarjeta:hover
+{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+
+}
+/*ubicacion*/
+.ubicacion
+{
+    background-color: rgb(255, 255, 255);
+}
+.cont-ubicacion
+{
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-rows: 20% 10% 70%;
+    color: rgb(0, 0, 0);
+    font-family: 'Righteous', cursive;
+    text-align: center;
+}
+.cont-ubicacion h2
+{
+    font-size: 10vh;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+}
+.cont-ubicacion p
+{
+    font-size: 5vh;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+}
+.mapa
+{
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.5);
+}
+.cont-ubicacion iframe
+{
+    border-radius: 20px;
+    height: 100%;
+}
+/*Contacto*/
+.contacto
+{
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+.cont-registro
+{
+    width: 90%;
+    height: 90%;
+    background-color: rgba(66,66,66, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.registro-redes
+{
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 1;
+    grid-template-areas: 
+    "registro redes"
+    ;
+    align-items: center;
+}
+.registro
+{
+    grid-area: registro;
+    height: 100%;
+}
+.redes 
+{
+    grid-area: redes;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-left: solid 2px black;
+}
+.redes legend
+{
+    font-size: 4vh;
+    font-family: 'Righteous', cursive;
+    color: white;
+}
+.redes .lista-redes
+{
+    justify-content: center;
+}
+.redes .lista-redes i
+{
+    color: white;
+    font-size: 6vh;
+    margin-right: 2vw;
+    width: 1em;
+    height: 1em;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 1s;
+    box-sizing: border-box;
+}
+.f i:hover
+{
+    background-color: #0061a9;
+    border: solid 1px white;
+}
+.i i:hover
+{
+    background-color: #E1306C;
+    border: solid 1px white;
+}
+.w i:hover
+{
+    background-color: #25D366;
+    border: solid 1px white;
+}
+
+.registro
+{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+    font-family: 'Righteous', cursive;
+    color: white;
+}
+.registro .t
+{
+    text-align: center;
+    font-size: 5vh;
+}
+.l
+{
+    font-size: 4vh;
+    text-align: center;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 70%;
 }
