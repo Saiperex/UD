@@ -145,20 +145,20 @@
                     <div class="registro">
                         <h2 class="t">Registrate</h2>
                         <legend class="l">Para recibir novedades</legend>
-                        <form action="">
+                        <form action="" id="form">
                             <label for="nombreapellido">Nombre y Apellido</label><!--La etiqueta for enlaza el texto del label al imput-->
-                            <input type="text" name="" id="nombreapellido" class="input-padron" required placeholder="Nombre y Apellido"><!--Entrada tipo texto-->
+                            <input type="text" name="nombre" id="nombreapellido" class="input-padron" required placeholder="Nombre y Apellido"><!--Entrada tipo texto-->
                             <!--La palabra required quiere decir que ese input es obligatorio-->
                             <!--El placeholder es el texto de adentro del input. Sirve como mensaje previo-->
                 
                             <label for="correoelectronico">Correo Electronico</label>
-                            <input type="email" name="" id="correoelectronico" class="input-padron"required placeholder="email@dominio.com"><!--Es un input que admite direccion de correo -->
+                            <input type="email" name="email" id="correoelectronico" class="input-padron"required placeholder="email@dominio.com"><!--Es un input que admite direccion de correo -->
                 
                             <label for="telefono">telefono</label>
                             <input type="tel" name="" id="telefono" class="input-padron"required placeholder="(xxx) 15(x-xxx-xxx)">
                             
                             <label for="contraseña">Contraseña</label>
-                            <input type="password" name="" id="contraseña" class="input-padron"required placeholder="">
+                            <input type="password" name="password" id="contraseña" class="input-padron"required placeholder="">
                             
                             <fieldset><!--Lo ecomendable es que si hay un grupo de inpput que pertenecen a algo en especifico, agruparlos de esta manera-->
                                 <legend>¿Como le gustaria que lo contactemos?</legend><!--Se prefiere usar esto en vez que P para marcar texto como una leyenda-->
@@ -186,7 +186,9 @@
                 
                             <label ><input type="checkbox" checked > Le gustaria recibir novedades de Universal Dance</label><!--Si lo agrego de esta manera no tendre que usar ni el id ni el for. El checkbox es un cuadradito para marcar-->
                 
-                            <input type="submit" class="enviar" value="Enviar Formulario"><!--Entrada tipo boton-enviar. Con el value puedo cambiar el texto del boton-->
+                            <input type="submit" 
+                            id="enviar"
+                            class="enviar" value="Enviar Formulario"><!--Entrada tipo boton-enviar. Con el value puedo cambiar el texto del boton-->
                 
                         </form>
                     </div>
@@ -206,5 +208,14 @@
             </div>
         </section>
     </main>
+    <!--Datos-->>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+    emailjs.init('5gdL-zIJjTOoMtnTm')
+    </script>
+    <!--script-->
+    <script src="script/script-correo.js"></script>
 </body>
 </html>
